@@ -16,15 +16,14 @@ public class FileSearch {
     public static void findIt(String x) throws IOException {
         int val = 0;
         System.out.println(x);
-        while (!x.matches("quit")) {
             Scanner input = new Scanner(System.in);
             //word = input.next();
-            Scanner file = new Scanner(new File("hiring.txt"));
+            Scanner file = new Scanner(new File("C:\\hiring\\resume.txt"));
 
             while (file.hasNextLine()) {
                 String line = file.nextLine();
                 if (line.contains(x)) {
-                    System.out.print(x + " was found.");
+                    System.out.println(x + " was found.");
                     val = 1;
                     break;
                 } else {
@@ -35,8 +34,8 @@ public class FileSearch {
             if (val == 0) {
                 System.out.println("Word does not exist");
             }
-            System.out.println(x + "-------continue or quit--- enter next term or type quit");
-            x = input.next();
-        }
+            System.out.println("Qutting...");
+
+
     }
 }
