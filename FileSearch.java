@@ -1,6 +1,8 @@
 import java.io.*;
 import java.util.Scanner;
 
+//Need to create a loop for the String.length() of the String array 'x' to be passed to findIt(String x)
+//resume.txt isn't recognized from command prompt (locally), only works in IDE like IntelliJ
 
 public class FileSearch {
     public static void main(String[] args) {
