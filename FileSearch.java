@@ -39,7 +39,7 @@ public class FileSearch {
            System.out.print("searching for '" + x + "'...");
         Scanner input = new Scanner(System.in);
 
-        Scanner file = new Scanner(new File("C:\\hiring\\resume.txt"));
+        Scanner file = new Scanner(new File("resume.txt"));
 
         while (file.hasNextLine()) {
             String line = file.nextLine();
