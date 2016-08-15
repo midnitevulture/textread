@@ -4,6 +4,7 @@
 * Loop calls class findIt() for each term in hireList array
 * @param x the String Array to pass to class findIt
 * class findIt scans 'resume.txt' and prints results
+* - Reid Tissing 2016
 */
 
 import java.io.*;
