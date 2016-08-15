@@ -1,11 +1,15 @@
+/**
+* Searches a document for the 'top 10 worst resume terms'
+* according to a 2013 Harris Poll of employers.
+* Loop calls class findIt() for each term in hireList array
+* @param x the String Array to pass to class findIt
+* class findIt scans 'resume.txt' and prints results
+*/
+
 import java.io.*;
 import java.util.Scanner;
-import java.io.File;
-import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.util.List;
-
-//resume.txt isn't recognized from command prompt (locally), only works in IDE like IntelliJ
 
 public class FileSearch {
     public static void main(String[] args) {
@@ -23,7 +27,7 @@ public class FileSearch {
         hireList.add("Team player");
         hireList.add("Bottom-line");
 
-        System.out.println("Searching document for the top 10 worst resume terms according to a 2013 Harris Poll survey...\r\n");
+        System.out.println("Scanning document for the top 10 worst resume terms according to a 2013 Harris Poll survey...\r\n");
         for (String temp : hireList) {
 
 
@@ -36,10 +40,10 @@ public class FileSearch {
     }
     public static void findIt(String x) throws IOException {
         int val = 0;
-           System.out.print("searching for '" + x + "'...");
+        System.out.print("searching for '" + x + "'...");
         Scanner input = new Scanner(System.in);
 
-        Scanner file = new Scanner(new File("resume.txt"));
+        Scanner file = new Scanner(new File("C:\\hiring\\resume.txt"));
 
         while (file.hasNextLine()) {
             String line = file.nextLine();
@@ -53,7 +57,7 @@ public class FileSearch {
             }
         }
         if (val == 0) {
-           System.out.print("not found. \r\n");
+            System.out.print("not found. \r\n");
         }
 
 
